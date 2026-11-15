@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import portrait from '../assets/images/about-portrait.jpg';
 
 const navLinks = [
   { name: 'Overview', href: '#hero' },
@@ -27,7 +28,7 @@ export const Navbar: React.FC = () => {
       <aside className={`${mobileMenuOpen ? 'flex' : 'hidden'} md:flex flex-col justify-between bg-[#000] border-r border-white/10 p-10 w-full md:w-[320px] fixed z-40 h-[calc(100vh-77px)] md:h-screen top-[77px] md:top-0 left-0 overflow-y-auto`}>
         <div>
           <div className="w-full aspect-[4/5] bg-[#1A1A1A] border border-brand-gold mb-5 flex items-center justify-center relative overflow-hidden hidden md:flex">
-            <img src="/stephen-portrait.jpg" alt="Stephen" className="w-full h-full object-cover grayscale opacity-80 mix-blend-lighten" />
+            <img src={portrait} alt="Stephen" className="w-full h-full object-cover grayscale opacity-80 mix-blend-lighten" />
           </div>
           <h1 className="font-serif text-[28px] leading-[1.1] mb-2 hidden md:block text-white">Stephen<br/>Ejimchukwu</h1>
           <p className="text-[12px] text-brand-gold uppercase tracking-[1px] mb-10 hidden md:block">Investment Strategist</p>
